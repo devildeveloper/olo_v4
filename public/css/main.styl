@@ -10,18 +10,18 @@ $green = #00a651
 //Clases
 .popup
   display none
-  width 820px
-  margin-left -410px
-  left 50%
+  width 90%
+  margin 0 auto
   background-color $blue
   position fixed
   z-index 10
   color white
-  margin-top 70px
+  left 5%
+  top 220px
   .close
     position absolute
-    top -22px
-    right -22px
+    top -12px
+    right -12px
     cursor pointer
   .column
     display inline-block
@@ -30,13 +30,15 @@ $green = #00a651
     text-align center
     &:last-child
       p
-        font-size 2.44rem
+        //font-size 2.44rem
+        font-size 1.11rem
         font-weight bold
         line-height 120%
       input
-        font-size 1.16rem
+        //font-size 1.16rem
+        font-size .611rem
         line-height 120%
-        border-radius .8rem
+        border-radius .4rem
         margin-top 10px
         margin-bottom 10px
         color black
@@ -54,6 +56,7 @@ $green = #00a651
 .wrapper
   max-width 1280px
   margin 0 auto
+  position relative
 .triangle
   width 0
   height 0
@@ -111,6 +114,7 @@ h1,h2,h3,h4,h5,h6
   padding-left 10px
 section
   margin-top 20px
+  position relative
 ul
   margin 0
   padding 0
@@ -119,10 +123,9 @@ ul
 body
   margin 0 auto
   font-size 18px
-  line-height 120%
   color $fontColor
   header
-    position fixed
+    position relative
     top 0
     left 0
     right 0
@@ -131,94 +134,90 @@ body
     background-color white
     z-index 2
     .wrapper
-      padding-bottom 10px
-      text-align right
+      text-align center
       picture
-        float left
-    .right
-      color $green
-      .content
-        display inline-block
-        vertical-align bottom
-        padding-left 1rem
-        padding-right 1rem
-        &:last-child
-          border-left 1px solid #606060
-          p
-            line-height 120%
-            &:first-child
-              font-size .88rem
-              color $gray1
-              &+p
-                color $green
-                font-size 1.33rem
-            &:last-child
-              font-size 2.3rem
-              color $green
+        border-bottom 1px solid $gray1
+        padding-bottom 10px
+        display block
+        img
+          margin 0 auto
+      .right
+        margin-top 10px
+        .content
+          &:first-child
+            p
+              &:first-child
+                font-size 1.44rem
+                &+p
+                  font-size 1.66rem
+              &:last-child
+                font-size .66rem
+                color $gray1
+      nav
+        margin-top 10px
         li
+          font-size 0
           display inline-block
-          margin-left .2rem
-          font-size .88rem
-          padding 10px
-          padding-left 20px
-          padding-right 20px
-          color white
-          cursor pointer
+          width 50%
+          padding-top 10px
+          padding-bottom 10px
+          text-align center
           &:first-child
             background-color $blue
           &:last-child
             background-color $purple
-  section[data-role="slider"]
-    padding-bottom 50px
-    color $grayDots
-    margin-top 100px
-    .follow
-      position fixed
-      top 230px
-      right 100px
-      z-index 9
+          a
+            font-size .88rem
+            color white
 
+  section[data-role="slider"]
+    margin-top 10px
+    margin-bottom 50px
+    .follow
+      display none
     .row
-      &:first-child
-        margin-top 90px
       &:last-child
         margin-top -30px
     #slider
-      .wrapper
-        position relative
       .more
         position absolute
-        bottom 30px
-        right 290px
+        margin-top 50px
+        bottom 5px
+        right 0
+        width 45%
+        img
+          display block
+          margin 0 auto
+          width auto !important
       .content
+        img
+          width 100%
         &.c1
           background-color $blue
         &.c2
           background-color $purple
         &.c3
           background-color $green
-      .wrapper
-        picture
-          display block
-          img
-            margin 0 auto
   section[data-role="dispositivos"]
-    .wrapper
-      max-width 940px
-    padding-bottom 40px
-    text-align center
+    margin-bottom 50px
     .title
       background-color $blue
+      h1
+        font-size 1rem
+        padding .722rem
+        width 90%
+        margin 0 auto
     ul.wrapper
       margin-top 20px
       .dispositivo
         display inline-block
         padding 10px
-        width 33%
         .content
           background-color $blue
           text-align center
           padding 10px
+          width 90%
+          margin 0 auto
           a
             img
               margin-top 10px
@@ -232,29 +231,27 @@ body
           img
             display block
             margin 0 auto
+            margin-top 10px
           p
             color white
     #slick-dsp
       .slick-dots
         bottom -40px
         li
-          &:nth-child(1) button::before
-            background-color $blue
-          &:nth-child(2) button::before
-            background-color $blue
-          &:nth-child(3) button::before
+          button::before
             background-color $blue
   section[data-role="planes"]
-    .wrapper
-      max-width 940px
-    text-align center
+    margin-bottom 70px
     .title
       background-color $purple
+      h1
+        font-size 1rem
+        padding .722rem
+        width 90%
+        margin 0 auto
     ul.wrapper
       margin-top 20px
       .plan
-        display inline-block
-        width 50%
         padding 10px
         .content
           background-color $purple
@@ -263,40 +260,56 @@ body
           padding 10px
           background-image url("../imagenes/tramas_planes.png")
           background-position 0 0
+          width 80%
+          margin 0 auto
+          max-width 250px
           p
             color white
           .column
-            display inline-block
-            vertical-align top
+            display block
+            picture
+              img
+                margin 0 auto
             &:last-child
               position relative
               padding-left 10px
               color white
               text-align center
               font-size .66rem
-              width 50%
               img
                 display block
                 margin 0 auto
                 margin-top 4px
               .title
                 font-size 1.11rem
+                margin-top 10px
               .limit
                 background-color white
                 color $purple
+                margin-top 10px
+                padding 3px
+                &+p
+                  margin-top 5px
               .limit2
                 font-size .55rem
-                line-height 120%
+                margin-top 5px
               .condicion
                 font-size .55rem
                 bottom: 30px;
                 line-height: 120%;
                 position: absolute;
                 text-align: left;
+    #slick-pls
+      .slick-dots
+        bottom -40px
+        li
+          button::before
+            background-color $purple
   footer
-    background-image url("../imagenes/piedepagina.jpg")
+    background-image url("../imagenes/movil/piedepagina.jpg")
     background-position center top
     background-repeat no-repeat
+    background-size 100% 100%
     padding-top 25px
     padding-bottom 25px
     text-align center
@@ -308,3 +321,60 @@ body
       font-size .88rem
       &:first-child
         text-transform uppercase
+@media screen and (min-width:768px)
+  body
+    header
+      position fixed
+      .wrapper
+        text-align right
+        picture
+          border-bottom 0
+          float left
+        .right
+          display inline-block
+          .content
+            position relative
+            &:first-child
+              padding-right 20px
+              width 300px
+              p
+                &:first-child
+                  padding-top 15px
+                &:last-child
+                  width 100%
+                  top 0
+                  right 20px
+                  position absolute
+    section[data-role="slider"]
+      margin-top 140px
+      .follow
+        display block
+        position fixed
+        right 0
+        top 150px
+        z-index 10
+    section[data-role="planes"]
+      ul.wrapper
+        .plan
+          //float none
+          width 50% !important
+          //display inline-block
+          &:nth-child(odd)
+            .content
+              margin-right 0
+              margin-left auto
+          &:nth-child(even)
+            .content
+              margin-right auto
+              margin-left 0
+          &:last-child
+            width 100% important
+            margin 0 auto
+            display block
+            float none
+            clear both
+            .content
+              margin 0 auto
+      #slick-pls
+          margin 0 auto
+          margin-top 20px

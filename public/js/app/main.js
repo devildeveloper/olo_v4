@@ -10,8 +10,33 @@ define(["jquery","slick","picturefill"],function($){
     $("#slick-dsp").slick({
       dots:true,
       arrows:false,
-      slidesToShow: 3,
-      slidesToScroll: 3
+      slidesToShow: 2,
+      slidesToScroll: 2,
+      responsive: [
+        {
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            dots:true
+          }
+        }
+    ]
+    });
+    $("#slick-pls").slick({
+      dots:true,
+      arrows:false,
+      slidesToShow: 5,
+      slidesToScroll: 1,
+      responsive:[
+        {
+          breakpoint:769,
+          settings:{
+            slidesToShow:1,
+            slidesToScroll:1
+          }
+        }
+      ]
     });
     $("#slider").on("afterChange",function(event, slick, currentSlide, nextSlide){
       var currentSlide = $('#slider').slick('slickCurrentSlide');
