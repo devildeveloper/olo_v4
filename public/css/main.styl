@@ -378,3 +378,35 @@ body
       #slick-pls
           margin 0 auto
           margin-top 20px
+@media screen and (min-width:1280px)
+  body
+    header
+      .wrapper
+        nav
+          display none
+        .right
+          .content
+            &:first-child
+              border-left 1px solid $grayDots
+              p
+                &:first-child
+                  font-size 1.33rem
+                  &+p
+                    font-size 1.77rem
+                &:last-child
+                  font-size .88rem
+    section[data-role="slider"]
+      margin-top 100px
+    section[data-role="planes"]
+      ul.wrapper
+        .plan
+          .content
+            max-width 460px
+            .column
+              display inline-block
+              vertical-align top
+              &:last-child
+                width 220px
+                p
+                  &.title
+                    margin-top 0

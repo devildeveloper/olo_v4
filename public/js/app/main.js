@@ -1,4 +1,4 @@
-define(["jquery","slick","picturefill"],function($){
+define(["jquery","slick","picturefill","analitics","zopim"],function($){
   $(document).on("ready",init);
   function init(){
     $("#slider").slick({
@@ -10,30 +10,52 @@ define(["jquery","slick","picturefill"],function($){
     $("#slick-dsp").slick({
       dots:true,
       arrows:false,
-      slidesToShow: 2,
-      slidesToScroll: 2,
+    //  arrows:false,
+      slidesToShow: 3,
+      slidesToScroll: 3,
       responsive: [
         {
-          breakpoint: 768,
+          breakpoint: 2000,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 3
+          }
+        },
+        {
+          breakpoint: 1279,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 2
+          }
+        },
+        {
+          breakpoint: 767,
           settings: {
             slidesToShow: 1,
-            slidesToScroll: 1,
-            dots:true
+            slidesToScroll: 1
           }
         }
     ]
     });
     $("#slick-pls").slick({
-      dots:true,
       arrows:false,
       slidesToShow: 5,
       slidesToScroll: 1,
       responsive:[
         {
-          breakpoint:769,
+          breakpoint:1279,
+          settings:{
+            slidesToShow:5,
+            slidesToScroll:1,
+            dots:false,
+          }
+        } ,
+        {
+          breakpoint:767,
           settings:{
             slidesToShow:1,
-            slidesToScroll:1
+            slidesToScroll:1,
+            dots:true,
           }
         }
       ]
