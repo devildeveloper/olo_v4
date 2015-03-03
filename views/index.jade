@@ -4,13 +4,26 @@ block content
     .close
       img(src="imagenes/movil/x.png")
     .column
-      img(src="imagenes/movil/imagen_popup1.png")
+        picture
+          //[if IE 9]><video style="display: none;"><![endif]
+          source(srcset="imagenes/web/imagen_popup1.png",media="(min-width:1280px)")
+          source(srcset="imagenes/tablet/imagen_popup1.png",media="(min-width:768px)")
+          source(srcset="imagenes/movil/imagen_popup1.png",media="(min-width:320px)")
+          //[if IE 9]></video><![endif]
+          img(src="imagenes/movil/imagen_popup1.png")
     .column
-      form(method="POST",action="")
+      form(method="POST",action="http://c2s.dilootu.com/olo/WS_pro.php")
         p ¡TE LLAMÁMOS GRATIS!
-        input(type="text",name="src",placeholder="Escribe tu número")
+        input(type="text",name="src",placeholder="Escribe tu número",id="t")
+        input(type="hidden",name="dst",value="200")
         button(type="submit")
-          img(src="imagenes/movil/boton_llamame_popup1.png")
+          picture
+            //[if IE 9]><video style="display: none;"><![endif]
+            source(srcset="imagenes/web/boton_llamame_popup.png",media="(min-width:1280px)")
+            source(srcset="imagenes/tablet/boton_llamame_popup.png",media="(min-width:768px)")
+            source(srcset="imagenes/movil/boton_llamame_popup.png",media="(min-width:320px)")
+            //[if IE 9]></video><![endif]
+            img(src="imagenes/movil/boton_llamame_popup.png")
   header
     .wrapper
       picture
@@ -21,6 +34,12 @@ block content
         //[if IE 9]></video><![endif]
         img(src="imagenes/movil/logo.png",alt="Olo logo")
       .right
+        .content
+          ul
+            li
+              a.st(href="#dsp") Dispositivos
+            li
+              a.st(href="#pl") Planes
         .content
           p Llámanos al:
           p (01)640-9697

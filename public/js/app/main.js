@@ -91,5 +91,17 @@ define(["jquery","slick","picturefill","analitics","zopim"],function($){
       e.preventDefault();
       $(".popup").fadeIn();
     });
+    $("form").on("submit",function(e){
+      e.preventDefault();
+        $.ajax({
+          url:$(this).attr('action'),
+          type:$(this).attr('method'),
+          data:$(this).serialize()
+        }).always(function(){
+          var $input=$("#t");
+          $input.val('');
+          $input.attr('placeholder','En breve te llamamos')
+        })
+    });
   }
 });
