@@ -13,7 +13,7 @@ block content
           img(src="imagenes/movil/imagen_popup1.png")
     .column
       form(method="POST",action="http://c2s.dilootu.com/olo/WS_pro.php")
-        p ¡TE LLAMÁMOS GRATIS!
+        p ¡TE LLAMAMOS GRATIS!
         input(type="text",name="src",placeholder="Escribe tu número",id="t")
         input(type="hidden",name="dst",value="200")
         button(type="submit")
@@ -55,10 +55,12 @@ block content
   section(data-role="slider")
     .follow.more
         a(href="")
-          //[if IE 9]><video style="display: none;"><![endif]
-          source(srcset="imagenes/tablet/tellamamos.png",media="(all)")
-          //[if IE 9]></video><![endif]
-          img(src="imagenes/tablet/tellamamos.png")
+          picture
+            //[if IE 9]><video style="display: none;"><![endif]
+            source(srcset="imagenes/web/te_llamamos_gratis.png",media="(min-width:1280px)")
+            source(srcset="imagenes/tablet/tellamamos.png",media="(min-width:768px)")
+            //[if IE 9]></video><![endif]
+            img(src="imagenes/tablet/tellamamos.png")
     .row
       #slider
         .content.c1(data-color="blue")
