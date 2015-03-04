@@ -20,12 +20,12 @@ app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(require('stylus').middleware({
-  src:path.join(__dirname, 'public'),
-  'inline-css':true,
-  compress:true,
-  sourcemap:true
-}));
+//app.use(require('stylus').middleware({
+//  src:path.join(__dirname, 'public'),
+//  'inline-css':true,
+//  compress:true,
+//  sourcemap:true
+//}));
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes);
