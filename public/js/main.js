@@ -93,17 +93,16 @@ function init(){
       }
     ]
   });
-  $("#slider").on("afterChange",function(event, slick, currentSlide, nextSlide){
-    var currentSlide = $('#slider').slick('slickCurrentSlide');
-    switch(currentSlide){
+  $("#slider").on("beforeChange",function(event, slick, currentSlide, nextSlide){
+    switch(nextSlide){
       case 0:
-        $(".triangle").css({'border-top':'20px solid #00aeef'});
+        $(".triangle").css({'border-top':'20px solid #00AEEF'});
         break;
         case 1:
-          $(".triangle").css({'border-top':'20px solid #662d91'});
+          $(".triangle").css({'border-top':'20px solid #662D91'});
           break;
           case 2:
-            $(".triangle").css({'border-top':'20px solid #00a651'});
+            $(".triangle").css({'border-top':'20px solid #00A651'});
             break;
             default:
             }
