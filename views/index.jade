@@ -113,7 +113,7 @@ block content
               source(srcset="imagenes/tablet/poster3.png",media="(min-width:768px)")
               source(srcset="imagenes/movil/poster3.png",media="(min-width:320px)")
               //[if IE 9]></video><![endif]
-              img(src="image/movil/poster3.png",alt="")
+              img(src="imagenes/movil/poster3.png",alt="")
     .row
       .triangle
   section(data-role="dispositivos")
@@ -264,7 +264,7 @@ block content
             p.limit2 HASTA 1GB de descarga
             img(src="imagenes/movil/precio_planesemanal.png")
             a.more(href="")
-              img(src="imagenes/movil/boton_quiero_este_plan.png")
+              img(src="http://res.cloudinary.com/hpepcfrth/image/upload/v1425520296/movil/tablet/web/boton_quiero_este_plan.png")
             p.condicion Plan valido
               br
               |solo para el
@@ -282,7 +282,7 @@ block content
             p.limit2 Hasta 3GB de descarga
             img(src="imagenes/movil/precio_planesemanal.png")
             a.more(href="")
-              img(src="imagenes/movil/boton_quiero_este_plan.png")
+              img(src="http://res.cloudinary.com/hpepcfrth/image/upload/v1425520296/movil/tablet/web/boton_quiero_este_plan.png")
             p.condicion Plan valido
               br
               |solo para el
@@ -300,7 +300,7 @@ block content
             p.limit2 HASTA 1GB de descarga
             img(src="imagenes/movil/precio_planesemanal.png")
             a.more(href="")
-              img(src="imagenes/movil/boton_quiero_este_plan.png")
+              img(src="http://res.cloudinary.com/hpepcfrth/image/upload/v1425520296/movil/tablet/web/boton_quiero_este_plan.png")
       li.plan
         .content
           .column
@@ -313,7 +313,7 @@ block content
             p.limit2 HASTA 3GB de descarga
             img(src="imagenes/movil/precio_planesemanal.png")
             a.more(href="")
-              img(src="imagenes/movil/boton_quiero_este_plan.png")
+              img(src="http://res.cloudinary.com/hpepcfrth/image/upload/v1425520296/movil/tablet/web/boton_quiero_este_plan.png")
       li.plan
         .content
           .column
@@ -326,8 +326,12 @@ block content
             p.limit2 Velocidad mínima garantizada 410Kbps
             img(src="imagenes/movil/precio_planesemanal.png")
             a.more(href="")
-              img(src="imagenes/movil/boton_quiero_este_plan.png")
+              img(src="http://res.cloudinary.com/hpepcfrth/image/upload/v1425520296/movil/tablet/web/boton_quiero_este_plan.png")
   footer
     p Página promocional autorizada/
     p Para mayor información visita: www.olo.pe
-  script(data-main="js/main",src="js/vendor/require.js",async)
+  script(src="js/vendor/jquery.js")
+  script(src="js/vendor/picturefill.js")
+  script(src="js/vendor/slick.js")
+  script(src="js/main.js")
+  //script(data-main="js/main",src="js/vendor/require.js",async)
