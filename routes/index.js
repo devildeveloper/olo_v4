@@ -6,9 +6,9 @@ memjs=MemJS.create();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  memjs.get('latest',function(err,value){
+
     res.render('index', { title: 'Express' });
-  })
+
 });
 
 module.exports = router;
