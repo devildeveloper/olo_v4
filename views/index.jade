@@ -335,6 +335,17 @@ block content
             img(src="imagenes/web/precio_planrelax.png")
             a.more(href="")
               img(src="http://res.cloudinary.com/hpepcfrth/image/upload/v1425520296/movil/tablet/web/boton_quiero_este_plan.png")
+
+    .more-plans
+      a(href="files/planes_OLO.pdf",target="_blank")
+        picture
+          //[if IE 9]><video style="display: none;"><![endif]
+          source(srcset="imagenes/web/boton_vermasplanes.png",media="(min-width:1280px)")
+          source(srcset="imagenes/tablet/boton_vermasplanes.png",media="(min-width:768px)")
+          source(srcset="imagenes/movil/boton_vermasplanes.png",media="(min-width:320px)")
+          //[if IE 9]></video><![endif]
+          img(src="imagenes/movil/boton_vermasplanes.png")
+
   footer
     p Página promocional autorizada/
     p Para mayor información visita: www.olo.pe
