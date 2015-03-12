@@ -96,17 +96,21 @@ function init(){
   $("#slider").on("beforeChange",function(event, slick, currentSlide, nextSlide){
     switch(nextSlide){
       case 0:
-        $(".triangle").css({'border-top':'20px solid #00AEEF'});
+        $("[data-role='slider'] .triangle").css({'border-top':'20px solid #00AEEF'});
         break;
         case 1:
-          $(".triangle").css({'border-top':'20px solid #662D91'});
+          $("[data-role='slider'] .triangle").css({'border-top':'20px solid #662D91'});
           break;
           case 2:
-            $(".triangle").css({'border-top':'20px solid #00A651'});
+            $("[data-role='slider'] .triangle").css({'border-top':'20px solid #00A651'});
             break;
             default:
             }
-    });
+    $("li .more").bind("click",function(e){
+      e.preventDefault();
+      $(".popup.m2").fadeIn();
+      });
+  });
     $(".st").on('click',function(e){
       e.preventDefault();
       var target=$(this).attr('href');
@@ -118,10 +122,21 @@ function init(){
     $(".close").on("click",function(){
       $(this).parent().fadeOut();
     });
-    $(".more").on("click",function(e){
+    $(".follow.more").bind("click",function(e){
       e.preventDefault();
-      $(".popup").fadeIn();
+      $(".popup.m1").fadeIn();
     });
+    $("li .more").bind("click",function(e){
+      e.preventDefault();
+      $(".popup.m2").fadeIn();
+    });
+    $("#slider .more").bind("click",function(e){
+      e.preventDefault();
+      $(".popup.m3").fadeIn();
+    });
+
+
+
     $("form").on("submit",function(e){
       e.preventDefault();
       $.ajax({
@@ -133,5 +148,11 @@ function init(){
         $input.val('');
         $input.attr('placeholder','En breve te llamamos')
       })
+    });
+    $(window).resize(function(){
+      $("li .more").bind("click",function(e){
+        e.preventDefault();
+        $(".popup.m2").fadeIn();
+      });
     });
 }
