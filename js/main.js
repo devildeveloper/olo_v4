@@ -143,11 +143,9 @@ function init(){
         url:$(this).attr('action'),
         type:$(this).attr('method'),
         data:$(this).serialize()
-      }).always(function(){
-        var $input=$("#t");
-        $input.val('');
-        $input.attr('placeholder','En breve te llamamos')
       })
+      var $input=$(this).children(".t");
+        $input.val('En breve te llamamos')
     });
     $(window).resize(function(){
       $("li .more").bind("click",function(e){
