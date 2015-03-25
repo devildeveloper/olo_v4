@@ -147,6 +147,18 @@ function init(){
       var $input=$(this).children(".t");
         $input.val('En breve te llamamos')
     });
+    $("#c2c").on("submit",function(e){
+      e.preventDefault();
+      $.ajax({
+        url:$(this).attr('action'),
+        type:$(this).attr('method'),
+        data:$(this).serialize()
+      })
+      var $input=$(this).children(".t");
+      $input.val('En breve te llamamos')
+      $(this).html("<img src='imagenes/movil/respuesta_movil.png'>");
+    });
+
     $(window).resize(function(){
       $("li .more").bind("click",function(e){
         e.preventDefault();
