@@ -95,6 +95,9 @@ body header .wrapper .right .content:first-child{display:none}body header .wrapp
   body .more-plans{padding-top: 0 !important;margin-top: -50px !important;}body .more-plans a{float:right}.popup{max-width:630px;height:354px;margin-top:-177px;}.popup .column:last-child p{font-size:1.88rem}.popup .column:last-child input{font-size:1rem}body header{position:fixed;}body header .wrapper{text-align:right;}body header .wrapper picture{border-bottom:0;float:left;margin-top:20px;padding-bottom:0;padding-top:6px;margin-left:20px}body header .wrapper .right{display:inline-block;}body header .wrapper .right .content{position:relative;}body header .wrapper .right .content:last-child{padding-right:20px;width:320px;border-left:1px solid #d3d3d3}body header .wrapper .right .content:last-child p:first-child{padding-top:20px}body header .wrapper .right .content:last-child p:last-child{width:100%;top:0;right:20px;}body section[data-role="slider"]{margin-top:195px;}body section[data-role="slider"] .follow{display:none;position:fixed;right:0;top:160px;z-index:10}body section[data-role="planes"] ul.wrapper .plan{width:50% !important;}body section[data-role="planes"] ul.wrapper .plan:nth-child(odd) .content{margin-right:0;margin-left:auto}body section[data-role="planes"] ul.wrapper .plan:nth-child(even) .content{margin-right:auto;margin-left:0}body section[data-role="planes"] ul.wrapper .plan:last-child{width:100% important;margin:0 auto;display:block;float:none;clear:both;}body section[data-role="planes"] ul.wrapper .plan:last-child .content{margin:0 auto}body section[data-role="planes"] #slick-pls{margin:0 auto;margin-top:20px}body .m2 .title{display:inline-block;font-size :2.66rem !important;border-bottom:5px solid white;}body .m2 .triangle{border-top:20px solid white;}body .m2 form{width:60%;margin:0 auto;margin-top:20px}body .m2 form p{font-size :1.55rem !important;}body .m2 form input{width:100%;font-size:1.16rem !important;}}
 
   @media screen and (min-width:880px){
+    body header .wrapper nav{
+      display:none;
+    }
     body header .wrapper .right .content{
       display:inline-block;
       vertical-align:bottom;
@@ -104,6 +107,9 @@ body header .wrapper .right .content:first-child{display:none}body header .wrapp
     body header .wrapper .right .content:first-child li:first-child{background-color:#00aeef}
     body header .wrapper .right .content:first-child li:last-child{margin-left:5px;background-color:#662d91;margin-right:30px}
     body header .wrapper .right .content:first-child li a{color:#fff}
+    body section[data-role="slider"] {
+      margin-top:140px;
+    }
   }
 
   @media screen and (min-width:1280px){
