@@ -157,6 +157,7 @@ function init(){
       var $input=$(this).children(".t");
       $input.val('En breve te llamamos')
       $(this).html("<img src='imagenes/movil/respuesta_movil.png'>");
+      window.location.href="llamando.html"
     });
 
     $(window).resize(function(){

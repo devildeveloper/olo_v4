@@ -8,6 +8,14 @@
 .slick-dots{
   display:none !important;
 }
+.gif{
+  width: 55px;height: 56px;border-radius:40px;display: inline-block;
+}
+.rpt{;
+  width: 130px;height: 60px;display: inline-block;margin-top: 10px;
+}.rpt img{
+  height: 100%;width: 100%;
+}
 .new-c{
   max-width:1024px;
   margin:-30px auto -70px;
