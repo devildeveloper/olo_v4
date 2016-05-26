@@ -152,12 +152,20 @@ function init(){
       $.ajax({
         url:$(this).attr('action'),
         type:$(this).attr('method'),
-        data:$(this).serialize()
+        data:$(this).serialize(),
+	complete:function(xhr,status){
+		console.log(status)
+		console.log(xhr);
+		var $input=$(this).children(".t");
+     		$input.val('En breve te llamamos')
+     		$(this).html("<img src='imagenes/movil/respuesta_movil.png'>");
+      		window.location.href="llamando.html"
+	}
       })
-      var $input=$(this).children(".t");
+/*      var $input=$(this).children(".t");
       $input.val('En breve te llamamos')
       $(this).html("<img src='imagenes/movil/respuesta_movil.png'>");
-      window.location.href="llamando.html"
+      window.location.href="llamando.html" */
     });
 
     $(window).resize(function(){
