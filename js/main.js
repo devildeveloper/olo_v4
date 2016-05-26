@@ -142,11 +142,18 @@ function init(){
       $.ajax({
         url:$(this).attr('action'),
         type:$(this).attr('method'),
-        data:$(this).serialize()
-      })
-      var $input=$(this).children(".t");
+        data:$(this).serialize(),
+        complete:function(xhr,status){
+    console.log(status)
+    console.log(xhr);
+    var $input=$(this).children(".t");
         $input.val('En breve te llamamos')
+        window.location.href="llamando.html"
+      }
+      })
+      
     });
+    //////
     $("#c2c").on("submit",function(e){
       e.preventDefault();
       $.ajax({
